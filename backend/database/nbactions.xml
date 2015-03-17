@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-mvn exec:java</actionName>
+            <displayName>mvn exec:java</displayName>
+            <goals>
+                <goal>exec:java</goal>
+            </goals>
+        </action>
+    </actions>

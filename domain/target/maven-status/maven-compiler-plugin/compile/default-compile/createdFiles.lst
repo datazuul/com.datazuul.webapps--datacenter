@@ -1,0 +1,8 @@
+com/datazuul/webapps/datacenter/domain/contact/EmailType.class
+com/datazuul/webapps/datacenter/domain/music/MusicTrack.class
+com/datazuul/webapps/datacenter/domain/contact/AddressType.class
+com/datazuul/webapps/datacenter/domain/contact/Address.class
+com/datazuul/webapps/datacenter/domain/contact/Email.class
+com/datazuul/webapps/datacenter/domain/contact/Phone.class
+com/datazuul/webapps/datacenter/domain/contact/Contact.class
+com/datazuul/webapps/datacenter/domain/contact/PhoneType.class

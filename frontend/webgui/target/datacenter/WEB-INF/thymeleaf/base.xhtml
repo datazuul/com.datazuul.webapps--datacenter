@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:dt="http://github.com/dandelion/datatables"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>datazuul Contacts</title>
+        <meta name="description" content="datazuul Contacts" />
+        <meta name="author" content="datazuul" />
+
+        <!-- Bootstrap -->
+        <link th:href="@{/css/bootstrap-spacelab.min.css}" rel="stylesheet"/>
+        <link th:href="@{/css/style.css}" rel="stylesheet"/>
+
+        <style type="text/css">
+
+        </style>
+
+        <!-- fav and touch icons -->
+        <link rel="shortcut icon" href="ico/favicon.ico" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" th:href="@{/ico/apple-touch-icon-144-precomposed.png}" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" th:href="@{/ico/apple-touch-icon-114-precomposed.png}" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" th:href="@{/ico/apple-touch-icon-72-precomposed.png}" />
+        <link rel="apple-touch-icon-precomposed" th:href="@{/ico/apple-touch-icon-57-precomposed.png}" />
+    </head>
+    <body>
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="../" class="navbar-brand"><img th:src="@{/images/datazuul_cms_184x30.png}" alt="datazuul Contacts" title="datazuul Contacts" style="margin-top:-6px;"/></a>
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar-main">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a th:href="@{/index}">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="apps">Apps <span class="caret"></span></a>
+                            <ul class="dropdown-menu" aria-labelledby="apps">
+                                <li><a th:href="@{/emails/}">Emails</a></li>
+                                <li><a th:href="@{/contacts/}">Contacts</a></li>
+                                <li><a th:href="@{/vita/}">Personal Data</a></li>
+                                <li><a th:href="@{/genealogy/}">Genealogy</a></li>
+                                <li class="divider"></li>
+                                <li><a th:href="@{/books/}">Books</a></li>
+                                <li><a th:href="@{/photos/}">Photos</a></li>
+                                <li><a th:href="@{/music/}">Music</a></li>
+                                <li><a th:href="@{/videos/}">Videos</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Download <span class="caret"></span></a>
+                            <ul class="dropdown-menu" aria-labelledby="download">
+                                <li><a href="./bootstrap.min.css">bootstrap.min.css</a></li>
+                                <li><a href="./bootstrap.css">bootstrap.css</a></li>
+                                <li class="divider"></li>
+                                <li><a href="./variables.less">variables.less</a></li>
+                                <li><a href="./bootswatch.less">bootswatch.less</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <!--<li><a href="#">Logout</a></li>-->
+                        <li><a href="?language=de" style="padding-right: 2px;">de</a></li>
+                        <li><a style="padding: auto 0px;">|</a></li>
+                        <li><a href="?language=en" style="padding-left: 2px;">en</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container main-content">
+            <!-- Main Content -->
+            <div th:if="${infoMessage}" class="alert alert-success" role="alert"><span th:utext="${infoMessage}"></span></div>
+            <div layout:fragment="content" class="innerWrapper">
+                <h1 th:text="'Contacts of ' + ${name} + '!'">Contacts of Dummy!</h1>
+            </div>
+
+            <hr />
+
+            <footer>
+                <p>Copyright &copy; <a href="http://www.datazuul.com" target="_blank">datazuul.com</a> 2014 - Built with Spring MVC and Thymeleaf</p>
+            </footer>
+
+        </div>
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+
+        <div th:replace="fragments/modal-confirmation-yes-no :: confirmDialog"></div>
+    </body>
+</html>

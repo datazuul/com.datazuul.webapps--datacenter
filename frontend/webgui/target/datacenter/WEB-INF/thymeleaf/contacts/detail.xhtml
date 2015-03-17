@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorator="contacts/base_contacts">
+  <head>
+    <title>Contact</title>
+  </head>
+  <body>
+    <div layout:fragment="body" class="innerWrapper" th:object="${contact}">
+      <h1>Contact</h1>
+
+      <div class="row">
+        <label class="col-md-2" for="firstname">Vorname</label>
+        <div class="col-md-10" id="firstname" th:text="*{firstname}">firstname</div>
+      </div>
+
+      <div class="row">
+        <label class="col-md-2" for="lastname">Nachname</label>
+        <div class="col-md-10" id="lastname" th:text="*{lastname}">lastname</div>
+      </div>
+
+      <div class="row">
+        <label class="col-md-2" for="email">Email</label>
+        <div class="col-md-10" id="email" th:text="*{emails}">email</div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-offset-2 col-md-10">
+          <button onclick="history.back()" class="btn btn-primary">zurück</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

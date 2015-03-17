@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorator="contacts/base_contacts">
+  <head>
+    <title>Add new contact</title>
+  </head>
+  <body>
+    <div layout:fragment="body" class="innerWrapper" th:with="servletPath=${#ctx.HttpServletRequest.getServletPath()}">
+      <h1>Add new contact</h1>
+
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <form action="#" class="form-horizontal" th:object="${contact}" method="post" role="form">
+            <div th:if="${#fields.hasAnyErrors()}" class="alert alert-danger" role="alert">
+              Bitte beheben Sie ungültige Eingaben.
+            </div>
+
+            <div class="form-group" th:classappend="${#fields.hasErrors('*{firstname}')} ? has-error">
+              <label class="col-md-2 control-label" for="firstname">Vorname</label>
+              <div class="col-md-10">
+                <input id="firstname" type="text" class="form-control" th:placeholder="#{placeholder.firstname}" th:field="*{firstname}" />
+                <p class="has-error help-block" th:if="${#fields.hasErrors('*{firstname}')}" th:errors="*{firstname}">...</p>
+              </div>
+            </div>
+
+            <div class="form-group" th:classappend="${#fields.hasErrors('*{lastname}')} ? has-error">
+              <label class="col-md-2 control-label" for="lastname">Nachname</label>
+              <div class="col-md-10">
+                <input id="lastname" type="text" class="form-control" th:placeholder="#{placeholder.lastname}" th:field="*{lastname}" />
+                <p class="has-error help-block" th:if="${#fields.hasErrors('*{lastname}')}" th:errors="*{lastname}">...</p>
+              </div>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Row</th>
+                  <th>Email</th>
+                  <th>Type</th>
+                  <th>
+                    <button type="submit" name="addEmailRow">Add row</button>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr th:each="email,emailStat : *{emails}">
+                  <td th:text="${emailStat.count}">1</td>
+                  <td>
+                    <input type="text" th:field="*{emails[__${emailStat.index}__].address}" />
+                  </td>
+                  <td>
+                    <select th:field="*{emails[__${emailStat.index}__].type}">
+                      <option th:each="var : ${allEmailTypes}" 
+                              th:value="${var.name()}" 
+                              th:text="${var.name()}">HOME</option>
+                    </select>
+                  </td>
+                  
+                  <td>
+                    <button type="submit" name="removeRow" 
+                            th:value="${emailStat.index}">Remove row</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+
+            <div class="form-group">
+              <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-primary">Speichern</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

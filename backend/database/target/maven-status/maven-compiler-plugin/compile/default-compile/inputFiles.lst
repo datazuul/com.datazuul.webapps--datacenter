@@ -1,0 +1,13 @@
+/media/KINGSTON/DEV/com.datazuul.webapps--contacts/backend/database/src/main/java/com/datazuul/webapps/datacenter/backend/impl/jpa/entities/ContactJpaEntity.java
+/media/KINGSTON/DEV/com.datazuul.webapps--contacts/backend/database/src/main/java/com/datazuul/utils/backend/repository/database/SchemaGeneratorAnnotatedClasses.java
+/media/KINGSTON/DEV/com.datazuul.webapps--contacts/backend/database/src/main/java/com/datazuul/webapps/datacenter/backend/impl/jpa/entities/PhoneJpaEntity.java
+/media/KINGSTON/DEV/com.datazuul.webapps--contacts/backend/database/src/main/java/com/datazuul/webapps/datacenter/backend/impl/jpa/entities/EmailJpaEntity.java
+/media/KINGSTON/DEV/com.datazuul.webapps--contacts/backend/database/src/main/java/com/datazuul/webapps/datacenter/backend/impl/jpa/ContactRepositoryJpa.java
+/media/KINGSTON/DEV/com.datazuul.webapps--contacts/backend/database/src/main/java/com/datazuul/webapps/datacenter/backend/impl/jpa/ContactRepositoryImplJpa.java
+/media/KINGSTON/DEV/com.datazuul.webapps--contacts/backend/database/src/main/java/com/datazuul/webapps/datacenter/backend/impl/jpa/MusicRepositoryJpa.java
+/media/KINGSTON/DEV/com.datazuul.webapps--contacts/backend/database/src/main/java/com/datazuul/webapps/datacenter/config/SpringConfigRepository.java
+/media/KINGSTON/DEV/com.datazuul.webapps--contacts/backend/database/src/main/java/com/datazuul/webapps/datacenter/backend/impl/jpa/MusicRepositoryImplJpa.java
+/media/KINGSTON/DEV/com.datazuul.webapps--contacts/backend/database/src/main/java/com/datazuul/webapps/datacenter/backend/impl/jpa/entities/AddressJpaEntity.java
+/media/KINGSTON/DEV/com.datazuul.webapps--contacts/backend/database/src/main/java/com/datazuul/utils/backend/repository/database/SchemaGenerator.java
+/media/KINGSTON/DEV/com.datazuul.webapps--contacts/backend/database/src/main/java/com/datazuul/webapps/datacenter/backend/impl/file/PreferencesRepositoryImpl.java
+/media/KINGSTON/DEV/com.datazuul.webapps--contacts/backend/database/src/main/java/com/datazuul/webapps/datacenter/backend/impl/jpa/entities/MusicTrackJpaEntity.java
