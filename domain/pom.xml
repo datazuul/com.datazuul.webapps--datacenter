@@ -10,7 +10,7 @@
     
     <artifactId>domain</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>com.datazuul.webapps.datacenter.domain</name>
+    <name>datazuul.com - DataZuul DataCenter (Model)</name>
     
     <dependencies>
         <!--    <dependency>

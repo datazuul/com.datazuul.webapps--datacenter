@@ -11,7 +11,7 @@
     <artifactId>backend</artifactId>
     <version>1.0-SNAPSHOT</version>
     
-    <name>com.datazuul.webapps.datacenter.backend</name>
+    <name>datazuul.com - DataZuul DataCenter (Backend)</name>
     
     <packaging>pom</packaging>
     

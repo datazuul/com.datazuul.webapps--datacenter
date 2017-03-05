@@ -6,7 +6,7 @@
         <artifactId>backend</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <name>com.datazuul.webapps.datacenter.backend.api</name>
+    <name>datazuul.com - DataZuul DataCenter (Backend API)</name>
     <groupId>com.datazuul.webapps.datacenter.backend</groupId>
     <artifactId>datacenter-backend-api</artifactId>
     <packaging>jar</packaging>
